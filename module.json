@@ -9,8 +9,7 @@
   "styles": [
     "styles/main.css"
   ],
-  "scripts": [
-    "scripts/vue.global.js",
+  "esmodules": [
     "scripts/main.js"
   ],
   "relationships": {
