@@ -8,7 +8,7 @@ export default {
         <h2>{{formatGroupName(actionGroup.listName)}}</h2>
     </div>
     <div class="action-btn" v-for="action in actionGroup.actions">
-        <button @click="executeAction(action.encodedValue)">
+        <button class="mobile-button" @click="executeAction(action.encodedValue)">
             {{action.name}}
         </button>
     </div>

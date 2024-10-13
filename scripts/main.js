@@ -2,9 +2,6 @@ import { createApp } from './vue.esm-browser.js'
 import App from './app.js'
 
 export function startApp() {
-    // disable rendering
-    $("#board").fadeOut();
-
     // start vue app
     document.body.insertAdjacentHTML(
         'beforeend',
@@ -15,7 +12,6 @@ export function startApp() {
 
 export function stopApp() {
     document.getElementById("mobile-remote-control-ui").remove()
-    $("#board").fadeIn();
 }
 
 Hooks.once('ready', () => {

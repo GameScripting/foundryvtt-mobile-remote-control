@@ -2,13 +2,15 @@ import {selectPlayerToken} from "../services/PlayerToken.js";
 import MoveControls from "./MoveControls.js";
 import ActionsControls from "./ActionsControls.js";
 import Accordion from "./Accordion.js";
+import TargetControls from "./TargetControls.js";
 import {stopApp} from "../main.js";
 
 export default {
   components: {
     Accordion,
     MoveControls,
-    ActionsControls
+    ActionsControls,
+    TargetControls
   },
   template: `
     <div id="mobile-view">
@@ -21,9 +23,16 @@ export default {
         </template>
         
         <template #header-1>
-          <h1>Aktionen</h1>
+          <h1>Targets</h1>
         </template>
         <template #content-1>
+          <TargetControls></TargetControls>
+        </template>
+        
+        <template #header-2>
+          <h1>Aktionen</h1>
+        </template>
+        <template #content-2>
           <ActionsControls></ActionsControls>
         </template>
       </Accordion>
@@ -32,6 +41,8 @@ export default {
   `,
   mounted() {
     selectPlayerToken();
+
+    Hooks.call("mobileRemoteControlReady");
   },
   methods: {
     exitMobileRemoteControl() {
