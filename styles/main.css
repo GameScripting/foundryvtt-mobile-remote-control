@@ -6,10 +6,12 @@
     width: 100vw;
     z-index: 175;
 
-    font-size: 18pt;
+    font-size: 36pt;
 }
 
 #mobile-view {
+    height: 100vh;
+    width: 100vw;
     overflow: auto;
 }
 
@@ -61,6 +63,28 @@ h2 {
 .move-controls .arrow-btn:active {
     background-color: #888;
 }
+
+/* -- ActionsControls -- */
+.action-group .weapon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.action-group .action-header {
+    display: flex;
+}
+
+.action-group .action-header img {
+    width: 50px;
+}
+
+.action-group .action-btn button {
+    padding: 30px;
+    margin: 15px 0;
+    font-size: 36pt;
+    line-height: 36pt;
+}
+
 
 /* -- Accordion -- */
 .accordion {

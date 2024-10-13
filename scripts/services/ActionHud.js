@@ -7,6 +7,7 @@ function analyseHudGroup(group, cb) {
         cb(group);
     } else {
         for(let g of group.groups.lists) {
+            g.parent = group
             analyseHudGroup(g, cb);
         }
     }
@@ -16,7 +17,12 @@ Hooks.on('tokenActionHudCoreHudUpdated', () => {
     const allActionGroups = [];
     for(let group of game.tokenActionHud.hud.groups) {
         analyseHudGroup(group, (group) => {
-            allActionGroups.push(group);
+            if(group.id.indexOf("strikes") == 0
+                || group.id.indexOf("spells") == 0
+                || group.id == "consumables"
+                || group.id == "saves") {
+                allActionGroups.push(group);
+            }
         })
     }
 
