@@ -2,6 +2,9 @@
   "id": "mobile-remote-control",
   "title": "mobile-remote-control",
   "version": "1.0.0",
+  "url": "https://github.com/GameScripting/foundryvtt-mobile-remote-control",
+  "manifest": "https://raw.githubusercontent.com/GameScripting/foundryvtt-mobile-remote-control/refs/heads/master/module.json",
+  "download": "https://github.com/GameScripting/foundryvtt-mobile-remote-control/archive/refs/heads/master.zip",
   "compatibility": {
     "minimum": "12",
     "verified": "12"
