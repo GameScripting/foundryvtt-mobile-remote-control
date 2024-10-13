@@ -13,13 +13,24 @@
     overflow: auto;
 }
 
-#mobile-view b {
+h1 {
     background: #a15000;
     color: #fff;
     display: block;
     width: 100%;
     text-align: center;
     font-size: 24pt;
+    padding: 3px;
+    font-weight: bold;
+}
+
+h2 {
+    background: #d06b00;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20pt;
     padding: 3px;
     font-weight: bolder;
 }
@@ -49,4 +60,28 @@
 
 .move-controls .arrow-btn:active {
     background-color: #888;
+}
+
+/* -- Accordion -- */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+.accordion-content {
+    padding: 10px;
+    background: #fff;
+}
+.accordion-header h3 {
+    margin: 0;
 }
