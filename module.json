@@ -1,0 +1,32 @@
+{
+  "id": "mobile-remote-control",
+  "title": "mobile-remote-control",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "styles": [
+    "styles/main.css"
+  ],
+  "scripts": [
+    "scripts/vue.global.js",
+    "scripts/main.js"
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "token-action-hud-core",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "dec0dr",
+      "discord": "dec0dr",
+      "flags": {}
+    }
+  ]
+}
