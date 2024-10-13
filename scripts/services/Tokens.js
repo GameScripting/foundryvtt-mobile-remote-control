@@ -1,4 +1,4 @@
-import {reactive} from "../vue.esm-browser.js";
+import {reactive, watch} from "../vue.esm-browser.js";
 import {playerToken} from "./PlayerToken.js";
 
 export let visibleTokens = reactive([]);
@@ -14,5 +14,12 @@ function updateVisibleTokens() {
     visibleTokens.push(...updated);
 }
 
+watch(
+    () => playerToken,
+    () => updateVisibleTokens()
+)
+
 Hooks.on('mobileRemoteControlReady', updateVisibleTokens);
 Hooks.on('sightRefresh', updateVisibleTokens);
+Hooks.on('createToken', updateVisibleTokens);
+Hooks.on('deleteToken', updateVisibleTokens);

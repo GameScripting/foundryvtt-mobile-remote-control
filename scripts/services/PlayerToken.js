@@ -6,11 +6,15 @@ export function selectPlayerToken() {
 }
 
 function moveToken(updateXY) {
+    function snapToGrid(value, gridSize) {
+        return Math.round(value / gridSize) * gridSize;
+    }
+
     const gridSize = canvas.grid.size; // Get the grid size (e.g., 100px per square)
     updateXY(playerToken, gridSize);
     playerToken.document.update({
-        x: playerToken.x,
-        y: playerToken.y
+        x: snapToGrid(playerToken.x, gridSize),
+        y: snapToGrid(playerToken.y, gridSize)
     });
 }
 
